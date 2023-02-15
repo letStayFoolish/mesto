@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Место</title>
+</head>
+<body class="page">
+    <div class="wrapper">
+        <header class="header container">
+            <a href="#" target="_blank" class="header__logo"></a>
+            <div class="header__line"></div>
+        </header>
+        <main class="main container">
+            <section class="profile">
+                <div class="profile__user">
+                    <img src="./images/profile-avatar.png" alt="Профильный аватар." class="profile__avatar">
+                    <div class="profile__info">
+                        <div class="profile__edit">
+                            <h1 class="profile__user-name text">Жак-Ив Кусто</h1>
+                            <button class="profile__edit-bttn"></button>
+                        </div>
+                        <p class="profile__user-occupation text">Исследователь океана</p>
+                    </div>
+                </div>
+                <button class="profile__add-bttn"></button>
+            </section>
+            <section class="places">
+                <div class="card">
+                    <img class="card__image" src="./images/1-Teriberka.jpg" alt="Териберка.">
+                    <div class="card__info">
+                        <h2 class="card__title text">Териберка</h2>
+                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/2-Baikal.jpg" alt="Изображение Байкал.">
+                    <div class="card__info">
+                        <h2 class="card__title text">Байкал</h2>
+                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/3-Sahalin.jpg" alt="ИзображениеСахалин.">
+                    <div class="card__info">
+                        <h2 class="card__title text">Сахалин</h2>
+                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/4-Degistan.jpg" alt="Изображение Дагестан.">
+                    <div class="card__info">
+                        <h2 class="card__title text">Дагестан</h2>
+                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/5-Murmansk.jpg" alt="Изображение Мурманск.">
+                    <div class="card__info">
+                        <h2 class="card__title text">Мурманск город герой</h2>
+                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/6-Altai.jpg" alt="Изображение Алтай.">
+                    <div class="card__info">
+                        <h2 class="card__title text">Алтай</h2>
+                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer container">
+            <p class="footer__licence">&copy; 2023 Mesto Russia</p>
+        </footer>
+        <div class="popup">
+            <div class="popup__container">
+                <button class="popup__close-bttn"></button>
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <form action="#" name="popup-form" novalidate class="popup__form">
+                    <input name="popup-username" type="text" placeholder="Жак-Ив Кусто" required class="popup__input popup__input_user-name">
+                    <input name="popup-occupation" type="text" placeholder="Исследователь океана" required class="popup__input popup__input_user-occupation">
+                    <button class="popup__submit-bttn" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./script/index.js"></script>
+</body>
+</html>

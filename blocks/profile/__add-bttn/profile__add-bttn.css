@@ -1,0 +1,22 @@
+.profile__add-bttn {
+    background-color: #000;
+    background: url(../../../images/add-symbol.svg) no-repeat center;
+    border: 2px solid #fff;
+    padding: 23px 74px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .8s ease 0s;
+}
+.profile__add-bttn:hover {
+    opacity: .6;
+}
+@media (max-width: 644px) {
+    .profile__add-bttn {
+        width: 50%;
+    }
+}
+@media (max-width: 320px) {
+    .profile__add-bttn {
+        width: 100%;
+    }
+}

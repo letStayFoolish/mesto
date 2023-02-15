@@ -1,0 +1,58 @@
+@import url(../vendor/fonts.css);
+@import url(../vendor/normalize.css);
+@import url(../blocks/page/page.css);
+
+/* WRAPPER */
+@import url(../blocks/wrapper/wrapper.css);
+
+/* CONTAINER */
+@import url(../blocks/container/container.css);
+
+/* IMG */
+@import url(../blocks/img/img.css);
+
+/* TEXT */
+@import url(../blocks/text/text.css);
+
+/* HEADER */
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__line/header__line.css);
+
+/* PROFILE */
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__user/profile__user.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__edit/profile__edit.css);
+@import url(../blocks/profile/__user-name/profile__user-name.css);
+@import url(../blocks/profile/__edit-bttn/profile__edit-bttn.css);
+@import url(../blocks/profile/__user-occupation/profile__user-occupation.css);
+@import url(../blocks/profile/__add-bttn/profile__add-bttn.css);
+
+/* PLACES */
+@import url(../blocks/places/places.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/card/__image/card__image.css);
+@import url(../blocks/card/__info/card__info.css);
+@import url(../blocks/card/__title/card__title.css);
+@import url(../blocks/card/__like-bttn/card__like-bttn.css);
+@import url(../blocks/card/__like-bttn/_disabled/card__like-bttn_disabled.css);
+@import url(../blocks/card/__like-bttn/_active/card__like-bttn_active.css);
+
+/* FOOTER */
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__licence/footer__licence.css);
+
+/* POPUP */
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_opend/popup_opend.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__close-bttn.css/popup__close-bttn.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__input/_user-name/popup__input_user-name.css);
+@import url(../blocks/popup/__input/_user-occupation/popup__input_user-occupation.css);
+@import url(../blocks/popup/__submit-bttn/popup__submit-bttn.css);
+

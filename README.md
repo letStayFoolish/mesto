@@ -1,17 +1,27 @@
-# Проект: Место
+# PLACE
 
-### Обзор
+#### By _**Nemanja Karaklajic**_
 
-* Figma
-* Картинки
+#### A simple HTML/CSS/JS interactive single-page service: Place.
 
-**Figma**
+## Technologies Used
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+* _HTML_
+* _CSS_
+* _JS_
 
-**Картинки**
+## Description
 
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
+_**Here users are able to place and remove their pictures, as also as put likes on them.**_
 
-Удачи!
+# This project is also hosted at
+- [GitHub](https://letstayfoolish.github.io/yandex-project_mesto/)
+
+
+## License
+
+````
+This project is licensed under the Yandex Practicum License.
+````
+
+Copyright (c) _2023_ _Nemanja Karaklajic_

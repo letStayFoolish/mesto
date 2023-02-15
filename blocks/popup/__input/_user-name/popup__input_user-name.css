@@ -1,0 +1,12 @@
+.popup__input_user-name {
+    font-size: 14px;
+    line-height: 121%;
+    color: #000;
+    margin: 54px 0 30px;
+    padding: 0 0 6px 0;
+}
+@media (max-width: 320px) {
+    .popup__input_user-name {
+        margin-top: 75px;
+    }
+}
