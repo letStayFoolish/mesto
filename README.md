@@ -15,7 +15,7 @@
 _**Here users are able to place and remove their pictures, as also as put likes on them.**_
 
 # This project is also hosted at
-- [GitHub](https://letstayfoolish.github.io/yandex-project_mesto/)
+- [GitHub](https://letstayfoolish.github.io/mesto/)
 
 
 ## License
