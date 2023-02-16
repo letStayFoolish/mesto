@@ -1,10 +1,11 @@
 .profile {
     padding: 40px 0 48px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-@media (max-width: 644px) {
+@media (max-width: 720px) {
     .profile {
         margin: 0 auto;
         padding: 42px 0 36px;

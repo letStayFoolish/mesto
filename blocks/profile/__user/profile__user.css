@@ -1,12 +1,5 @@
-.profile__user {
-    display: flex;
-    align-items: center;
-    text-align: start;
-    padding-right: 15px;
-}
-@media (max-width: 644px) {
+@media (max-width: 720px) {
     .profile__user {
-        flex-direction: column;
-        padding: 0;
+        margin-bottom: 36px;
     }
 }

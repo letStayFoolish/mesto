@@ -6,7 +6,9 @@
     background-color: #000;
     background: url(../../../images/edit-button.svg) no-repeat center;
     background-size: 24px 24px;
-    border: 0;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    flex-shrink: 0;
     cursor: pointer;
     opacity: 1;
     transition: opacity .8s ease 0s;
@@ -14,7 +16,7 @@
 .profile__edit-bttn:hover {
     opacity: .6;
 }
-@media (max-width: 644px) {
+@media (max-width: 720px) {
     .profile__edit-bttn {
         width: 18px;
         height: 18px;

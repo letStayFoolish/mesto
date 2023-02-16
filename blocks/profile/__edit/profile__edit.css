@@ -1,17 +1,19 @@
 .profile__edit {
-    display: flex;
+    display: inline-flex;
     align-items: baseline;
-    gap: 18px;
-    padding: 0;
+    max-width: 336px;
 }
 .profile__edit:not(:last-child) {
     margin-bottom: 16px;
 }
-@media (max-width: 644px) {
-    .profile__edit {
-        gap: 10px;
-    }
+
+@media (max-width: 720px) {
     .profile__edit:not(:last-child) {
-        margin-bottom: 6px;
+        margin-bottom: 14px;
+    }
+}
+@media (max-width: 400px) {
+    .profile__edit:not(:last-child) {
+        max-width: 282px;
     }
 }

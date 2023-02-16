@@ -8,6 +8,9 @@
 /* CONTAINER */
 @import url(../blocks/container/container.css);
 
+/* MAIN */
+@import url(../blocks/main/main.css);
+
 /* IMG */
 @import url(../blocks/img/img.css);
 
@@ -17,13 +20,12 @@
 /* HEADER */
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
-@import url(../blocks/header/__line/header__line.css);
 
 /* PROFILE */
 @import url(../blocks/profile/profile.css);
-@import url(../blocks/profile/__user/profile__user.css);
+@import url(../blocks/profile/__block/profile__block.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__user/profile__user.css);
 @import url(../blocks/profile/__edit/profile__edit.css);
 @import url(../blocks/profile/__user-name/profile__user-name.css);
 @import url(../blocks/profile/__edit-bttn/profile__edit-bttn.css);
