@@ -17,6 +17,6 @@
     .profile__user-name {
         text-align: center;
         font-size: 27px;
-        margin: 0 10px 0 0;
+        margin: 0 10px 0 25px;
     }
 }
