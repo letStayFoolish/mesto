@@ -14,5 +14,5 @@
     -ms-text-size-adjust: 100%;
     -moz-osx-text-size-adjust: 100%;
     /* Рендеринг */
-    /* text-rendering: optimizeLegibility; */
+    text-rendering: optimizeLegibility;
 }
