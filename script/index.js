@@ -3,8 +3,8 @@ const closePopupButton = document.querySelector('.popup__close-bttn');
 const submitButton = document.querySelector('.popup__submit-bttn');
 const popup = document.querySelector('.popup');
 
-const popupInputUserName = document.querySelector('.popup__input_user-name');
-const popupInputOccupation = document.querySelector('.popup__input_user-occupation');
+const popupInputUserName = document.querySelector('.popup__input_user_name');
+const popupInputOccupation = document.querySelector('.popup__input_user_occupation');
 
 const userNameElement = document.querySelector('.profile__user-name');
 const userOccupationElement = document.querySelector('.profile__user-occupation');

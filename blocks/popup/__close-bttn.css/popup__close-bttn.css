@@ -8,6 +8,7 @@
     transition: opacity .7s ease 0s;
     cursor: pointer;
     border: 0;
+    padding: 0;
     position: absolute;
     top: -40px;
     right: -40px;
@@ -17,7 +18,10 @@
 }
 @media (max-width: 570px) {
     .popup__close-bttn {
-        top: -56px;
+        top: -36px;
         right: 0;
+        background-size: 20px 20px;
+        width: 20px;
+        height: 20px;
     }
 }
