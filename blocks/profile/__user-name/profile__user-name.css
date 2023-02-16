@@ -13,3 +13,10 @@
         line-height: 122%;
     }
 }
+@media (max-width: 720px) {
+    .profile__user-name {
+        text-align: center;
+        font-size: 27px;
+        margin: 0 10px 0 0;
+    }
+}

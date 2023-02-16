@@ -15,5 +15,6 @@
 @media (max-width: 400px) {
     .profile__edit:not(:last-child) {
         max-width: 282px;
+        margin-bottom: 7px;
     }
 }
