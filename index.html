@@ -9,9 +9,11 @@
 </head>
 <body class="page">
     <div class="wrapper">
+        <!-- HEADER -->
         <header class="header">
             <a href="#" target="_blank" class="header__logo"></a>
         </header>
+        <!-- MAIN -->
         <main class="main container">
             <section class="profile">
                 <div class="profile__block">
@@ -19,54 +21,55 @@
                     <div class="profile__user">
                         <div class="profile__edit">
                             <h1 class="profile__user-name">Жак-Ив Кусто</h1>
-                            <button class="profile__edit-bttn"></button>
+                            <button type="button" class="profile__edit-bttn"></button>
                         </div>
                         <p class="profile__user-occupation">Исследователь океана</p>
                     </div>
                 </div>
-                <button class="profile__add-bttn"></button>
+                <button type="button" class="profile__add-bttn"></button>
             </section>
+            <!-- PLACES -->
             <section class="places">
                 <div class="card">
                     <img class="card__image" src="./images/1-Teriberka.jpg" alt="Териберка.">
                     <div class="card__info">
                         <h2 class="card__title text">Териберка</h2>
-                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                        <button type="button" class="card__like-bttn"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/2-Baikal.jpg" alt="Изображение Байкал.">
                     <div class="card__info">
                         <h2 class="card__title text">Байкал</h2>
-                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                        <button type="button" class="card__like-bttn"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/3-Sahalin.jpg" alt="ИзображениеСахалин.">
                     <div class="card__info">
                         <h2 class="card__title text">Сахалин</h2>
-                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                        <button type="button" class="card__like-bttn"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/4-Degistan.jpg" alt="Изображение Дагестан.">
                     <div class="card__info">
                         <h2 class="card__title text">Дагестан</h2>
-                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                        <button type="button" class="card__like-bttn"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/5-Murmansk.jpg" alt="Изображение Мурманск.">
                     <div class="card__info">
                         <h2 class="card__title text">Мурманск город герой</h2>
-                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                        <button type="button" class="card__like-bttn"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/6-Altai.jpg" alt="Изображение Алтай.">
                     <div class="card__info">
                         <h2 class="card__title text">Алтай</h2>
-                        <div class="card__like-bttn card__like-bttn_disabled"></div>
+                        <button type="button" class="card__like-bttn"></button>
                     </div>
                 </div>
             </section>
@@ -76,7 +79,7 @@
         </footer>
         <div class="popup">
             <div class="popup__container">
-                <button class="popup__close-bttn"></button>
+                <button type="button" class="popup__close-bttn"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form action="#" name="popup-form" novalidate class="popup__form">
                     <input name="popup-username" type="text" placeholder="Жак-Ив Кусто" required class="popup__input popup__input_user-name">

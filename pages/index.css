@@ -39,7 +39,6 @@
 @import url(../blocks/card/__info/card__info.css);
 @import url(../blocks/card/__title/card__title.css);
 @import url(../blocks/card/__like-bttn/card__like-bttn.css);
-@import url(../blocks/card/__like-bttn/_disabled/card__like-bttn_disabled.css);
 @import url(../blocks/card/__like-bttn/_active/card__like-bttn_active.css);
 
 /* FOOTER */
