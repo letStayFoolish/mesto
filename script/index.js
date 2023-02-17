@@ -25,7 +25,6 @@ function handleFormSubmit(evt) {
     userOccupationElement.textContent = popupInputOccupation.value;
     handleFormClose();
 };
-
 editProfileButton.addEventListener('click', handleFormOpen);
 closePopupButton.addEventListener('click', handleFormClose);
 formElement.addEventListener('submit', handleFormSubmit);
