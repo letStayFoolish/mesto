@@ -1,4 +1,4 @@
-.popup__submit-bttn {
+.popup__submit-btn {
     color: #fff;
     background-color: #000;
     font-size: 18px;
@@ -10,17 +10,17 @@
     cursor: pointer;
     padding: 14px 132px;
 }
-.popup__submit-bttn:hover {
+.popup__submit-btn:hover {
     opacity: .8;
 }
 @media (max-width: 476px) {
-    .popup__submit-bttn {
+    .popup__submit-btn {
         padding: 14px 82px;
         font-size: 16px;
     }
 }
 @media (max-width: 320px) {
-    .popup__submit-bttn {
+    .popup__submit-btn {
         text-align: center;
         font-size: 14px;
     }

@@ -21,17 +21,18 @@
                     <div class="profile__user">
                         <div class="profile__edit">
                             <h1 class="profile__user-name">Жак-Ив Кусто</h1>
-                            <button type="button" class="profile__edit-bttn"></button>
+                            <button type="button" class="profile__edit-btn"></button>
                         </div>
                         <p class="profile__user-occupation">Исследователь океана</p>
                     </div>
                 </div>
-                <button type="button" class="profile__add-bttn"></button>
+                <button type="button" class="profile__add-btn"></button>
             </section>
             <!-- PLACES -->
             <section class="places">
-                <div class="card">
+                <!-- <div class="card">
                     <img class="card__image" src="./images/1-Teriberka.jpg" alt="Териберка.">
+                    <button type="button" class="card__remove-btn"></button>
                     <div class="card__info">
                         <h2 class="card__title text">Териберка</h2>
                         <button type="button" class="card__like-bttn"></button>
@@ -71,7 +72,7 @@
                         <h2 class="card__title text">Алтай</h2>
                         <button type="button" class="card__like-bttn"></button>
                     </div>
-                </div>
+                </div> -->
             </section>
         </main>
         <!-- FOOTER -->
@@ -79,21 +80,43 @@
             <p class="footer__licence">&copy; 2023 Mesto Russia</p>
         </footer>
         <!-- POPUP -->
-        <div class="popup">
+        <div class="popup popup_new_user">
             <div class="popup__container">
                 <div class="popup__body">
-                    <button type="button" class="popup__close-bttn"></button>
+                    <button type="button" class="popup__close-btn popup__close-btn_new_user"></button>
                     <h2 class="popup__title">Редактировать профиль</h2>
-                    <form action="#" name="popup-form" novalidate class="popup__form">
+                    <form action="#" name="popup-form" novalidate class="popup__form popup__form_new_user">
                         <input name="popup-username" type="text" placeholder="Жак-Ив Кусто" required class="popup__input popup__input_user_name text">
                         <input name="popup-occupation" type="text" placeholder="Исследователь океана" required class="popup__input popup__input_user_occupation text">
-                        <button class="popup__submit-bttn" type="submit">Сохранить</button>
+                        <button class="popup__submit-btn" type="submit">Сохранить</button>
                     </form>
                 </div>
             </div>
-            
+        </div>
+        <div class="popup popup_new_item">
+            <div class="popup__container">
+                <div class="popup__body">
+                    <button type="button" class="popup__close-btn popup__close-btn_new_item"></button>
+                    <h2 class="popup__title">Новое место</h2>
+                    <form action="#" name="popup-form" novalidate class="popup__form popup__form_new_item">
+                        <input name="popup-username" type="text" placeholder="Название" required class="popup__input popup__input_user_name text">
+                        <input name="popup-occupation" type="text" placeholder="Ссылка на картинку" required class="popup__input popup__input_user_occupation text">
+                        <button class="popup__submit-btn" type="submit">Сохранить</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+    <template class="template places">
+        <div class="card">
+            <img src="" alt="">
+            <button type="button" class="card__remove-btn"></button>
+            <div class="card__info">
+                <h2></h2>
+                <button type="button" class="card__like-bttn"></button>
+            </div>
+        </div>
+    </template>
     <script src="./scripts/index.js"></script>
 </body>
 </html>
