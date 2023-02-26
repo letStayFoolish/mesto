@@ -61,40 +61,45 @@ closeNewItemPopupButton.addEventListener('click', handleNewItemFormClose);
 // GALERY PLACES
 const initialCards = [
     {
-        imageName: 'Териберка',
-        imageLink: 'https://unsplash.com/photos/utmKk7r_bz0',
+        name: 'Териберка',
+        link: 'https://images.unsplash.com/photo-1606841599773-7307a2b5ce34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=953&q=80'
     },
     {
-        imageName: 'Байкал',
-        imageLink: 'https://unsplash.com/photos/RlB6fvnaduc',
+        name: 'Байкал',
+        link: 'https://images.unsplash.com/photo-1676466920684-5d1aae90c9c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
     },
     {
-        imageName: 'Сахалин',
-        imageLink: 'https://unsplash.com/photos/2_85zyiPHEM',
+        name: 'Сахалин',
+        link: 'https://images.unsplash.com/photo-1662953594079-a43b3767aca5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
     },
     {
-        imageName: 'Дагестан',
-        imageLink: 'https://unsplash.com/photos/7ea_9cXwJVA',
+        name: 'Дагестан',
+        link: 'https://images.unsplash.com/photo-1652716456950-0c1d6e1433cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
     },
     {
-        imageName: 'Мурманск город герой',
-        imageLink: 'https://unsplash.com/photos/blXhzukdikg',
+        name: 'Мурманск город герой',
+        link: 'https://images.unsplash.com/photo-1615924631431-3a5c33d767d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
     },
     {
-        imageName: 'Алтай',
-        imageLink: 'https://unsplash.com/photos/am4mOl5h_EA',
-    }
+        name: 'Алтай',
+        link: 'https://images.unsplash.com/photo-1643281237857-5f14c2b9f3ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+    },
 ];
+const placesContainer = document.querySelector('.places');
 
-const cardHTML = `
-<div class="card">
-<img class="card__image" src="./images/1-Teriberka.jpg" alt="Териберка.">
-<button type="button" class="card__remove-btn"></button>
-<div class="card__info">
-    <h2 class="card__title text">Териберка</h2>
-    <button type="button" class="card__like-bttn"></button>
-</div>
-</div>
-`;
+function createNewCard(newName, newLink) {
+    const newCard = document.querySelector('#cardTemplate').content.cloneNode(true);
+    const cardElementHeading = newCard.querySelector('.card__title');
+    const cardElementImage = newCard.querySelector('.card__image');
+    
+    cardElementHeading.textContent = newName;
+    cardElementImage.setAttribute('src', newLink);
+
+    return newCard;
+};
+
+initialCards.forEach(card => {
+    placesContainer.append(createNewCard(card.name, card.link));
+});
 
 

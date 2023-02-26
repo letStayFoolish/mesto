@@ -30,49 +30,7 @@
             </section>
             <!-- PLACES -->
             <section class="places">
-                <!-- <div class="card">
-                    <img class="card__image" src="./images/1-Teriberka.jpg" alt="Териберка.">
-                    <button type="button" class="card__remove-btn"></button>
-                    <div class="card__info">
-                        <h2 class="card__title text">Териберка</h2>
-                        <button type="button" class="card__like-bttn"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/2-Baikal.jpg" alt="Изображение Байкал.">
-                    <div class="card__info">
-                        <h2 class="card__title text">Байкал</h2>
-                        <button type="button" class="card__like-bttn"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/3-Sahalin.jpg" alt="ИзображениеСахалин.">
-                    <div class="card__info">
-                        <h2 class="card__title text">Сахалин</h2>
-                        <button type="button" class="card__like-bttn"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/4-Degistan.jpg" alt="Изображение Дагестан.">
-                    <div class="card__info">
-                        <h2 class="card__title text">Дагестан</h2>
-                        <button type="button" class="card__like-bttn"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/5-Murmansk.jpg" alt="Изображение Мурманск.">
-                    <div class="card__info">
-                        <h2 class="card__title text">Мурманск город герой</h2>
-                        <button type="button" class="card__like-bttn"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/6-Altai.jpg" alt="Изображение Алтай.">
-                    <div class="card__info">
-                        <h2 class="card__title text">Алтай</h2>
-                        <button type="button" class="card__like-bttn"></button>
-                    </div>
-                </div> -->
+
             </section>
         </main>
         <!-- FOOTER -->
@@ -99,20 +57,20 @@
                     <button type="button" class="popup__close-btn popup__close-btn_new_item"></button>
                     <h2 class="popup__title">Новое место</h2>
                     <form action="#" name="popup-form" novalidate class="popup__form popup__form_new_item">
-                        <input name="popup-username" type="text" placeholder="Название" required class="popup__input popup__input_user_name text">
-                        <input name="popup-occupation" type="text" placeholder="Ссылка на картинку" required class="popup__input popup__input_user_occupation text">
+                        <input name="popup-image-name" type="text" placeholder="Название" required class="popup__input popup__input_image_name text">
+                        <input name="popup-image-link" type="text" placeholder="Ссылка на картинку" required class="popup__input popup__input_image_link text">
                         <button class="popup__submit-btn" type="submit">Сохранить</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <template class="template places">
+    <template id="cardTemplate">
         <div class="card">
-            <img src="" alt="">
+            <img class="card__image">
             <button type="button" class="card__remove-btn"></button>
             <div class="card__info">
-                <h2></h2>
+                <h2 class="card__title text"></h2>
                 <button type="button" class="card__like-bttn"></button>
             </div>
         </div>
