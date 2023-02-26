@@ -36,8 +36,8 @@
 @import url(../blocks/card/__remove-btn/card__remove-btn.css);
 @import url(../blocks/card/__info/card__info.css);
 @import url(../blocks/card/__title/card__title.css);
-@import url(../blocks/card/__like-bttn/card__like-bttn.css);
-@import url(../blocks/card/__like-bttn/_active/card__like-bttn_active.css);
+@import url(../blocks/card/__like-btn/card__like-btn.css);
+@import url(../blocks/card/__like-btn/_active/card__like-btn_active.css);
 
 /* FOOTER */
 @import url(../blocks/footer/footer.css);
@@ -56,5 +56,12 @@
 @import url(../blocks/popup/__input/_user/popup__input_user_occupation.css);
 @import url(../blocks/popup/__input/_image/popup__input_image_name.css);
 @import url(../blocks/popup/__input/_image/popup__input_image_link.css);
-@import url(../blocks/popup/__submit-btn/popup__submit-btn.css)
+@import url(../blocks/popup/__submit-btn/popup__submit-btn.css);
+
+/* IMAGE POPUP */
+@import url(../blocks/popup-img/popup-img.css);
+@import url(../blocks/popup-img/__image/popup-img__image.css);
+@import url(../blocks/popup-img/__title/popup-img__title.css);
+@import url(../blocks/popup-img/__btn/popup-img__btn.css);
+
 

@@ -1,0 +1,7 @@
+.popup-img__image {
+    object-fit: cover;
+    object-position: top left;
+    max-width: 70vw;
+    max-height: 70vw;
+    display: flex;
+}
