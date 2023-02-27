@@ -14,27 +14,32 @@ const userOccupationElement = document.querySelector('.profile__user-occupation'
 const handleFormOpen = (item) => {
     item.classList.add('popup_opened');
 };
+// -----------------------------------------------------------
 // POPUP FORMS CLOSE
 const handleFormClose = (item) => {
     item.classList.remove('popup_opened');
 };
+// -----------------------------------------------------------
 // POPUP NEW USER FORM OPEN
-function handleNewUserFormOpen(evt) {
+function handleNewUserFormOpen(event) {
     handleFormOpen(popupNewUser);
     popupInputUserName.value = userNameElement.textContent;
     popupInputOccupation.value = userOccupationElement.textContent;
 };
+// -----------------------------------------------------------
 // POPUP NEW USER FORM CLOSE
-function handleNewUserFormClose(evt) {
+function handleNewUserFormClose(event) {
     handleFormClose(popupNewUser);
 };
+// -----------------------------------------------------------
 // POPUP NEW USER FORM SUBMIT
-function handleFormSubmit(evt) {
+function handleFormSubmit(event) {
     evt.preventDefault();
     userNameElement.textContent = popupInputUserName.value;
     userOccupationElement.textContent = popupInputOccupation.value;
     handleFormClose(popupNewUser);
 };
+// -----------------------------------------------------------
 // POPUP NEW USER FORM EVENTS
 editProfileButton.addEventListener('click', handleNewUserFormOpen);
 closeNewUserPopupButton.addEventListener('click', handleNewUserFormClose);
@@ -54,11 +59,11 @@ function handleNewItemFormOpen(evt) {
 function handleNewItemFormClose(evt) {
     handleFormClose(popupNewItem);
 };
-
+// -----------------------------------------------------------
 // POPUP NEW ITEM FORM EVENTS
 openNewItemButton.addEventListener('click', handleNewItemFormOpen);
 closeNewItemPopupButton.addEventListener('click', handleNewItemFormClose);
-
+// -----------------------------------------------------------------------------
 // GALERY PLACES
 const initialCards = [
     {
@@ -93,15 +98,16 @@ function createNewCard(newName, newLink) {
     const newCard = document.querySelector('#cardTemplate').content.cloneNode(true);
     const cardElementHeading = newCard.querySelector('.card__title');
     const cardElementImage = newCard.querySelector('.card__image');
-
     cardElementHeading.textContent = newName;
     cardElementImage.setAttribute('src', newLink);
+    // -----------------------------------------------------------
     // ADD LIKE ONTO IMAGES
     const imageLikeButton = newCard.querySelector('.card__like-btn');
     const puttLike = () => {
         imageLikeButton.classList.toggle('card__like-btn_active');
     };
     imageLikeButton.addEventListener('click', puttLike);
+    // -----------------------------------------------------------
     // REMOVE CARDS
     const removeImageButton = newCard.querySelector('.card__remove-btn');
     const removeImage = () => {
@@ -111,6 +117,7 @@ function createNewCard(newName, newLink) {
     removeImageButton.addEventListener('click', removeImage);
 
     cardElementImage.style.cursor = 'pointer';
+    // -----------------------------------------------------------
     // IMAGES MODAL
     const imageModal = document.querySelector('.modal');
     const modalImage = imageModal.querySelector('.modal__image');
@@ -131,6 +138,7 @@ function createNewCard(newName, newLink) {
     }
     cardElementImage.addEventListener('click', openModalImage);
     modalCloseButton.addEventListener('click', closeModal)
+    // -----------------------------------------------------------
     return newCard;
 };
 // ADD CARDS INTO HTML
