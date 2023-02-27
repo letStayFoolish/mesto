@@ -69,26 +69,32 @@ closeNewItemPopupButton.addEventListener('click', handleNewItemFormClose);
 const initialCards = [
     {
         name: 'Териберка',
+        alt: 'Териберка и Баренцево море зимой.',
         link: 'https://images.unsplash.com/photo-1606841599773-7307a2b5ce34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=953&q=80'
     },
     {
         name: 'Байкал',
+        alt: 'Зимний солнечный день на Байкале.',
         link: 'https://images.unsplash.com/photo-1676466920684-5d1aae90c9c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
     },
     {
         name: 'Сахалин',
+        alt: 'Зимний солнечный день на Байкале',
         link: 'https://images.unsplash.com/photo-1662953594079-a43b3767aca5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
     },
     {
         name: 'Дагестан',
+        alt: 'Дагестанские горы.',
         link: 'https://images.unsplash.com/photo-1652716456950-0c1d6e1433cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
     },
     {
         name: 'Мурманск город герой',
+        alt: 'Алёша памятник в Мурманске.',
         link: 'https://images.unsplash.com/photo-1615924631431-3a5c33d767d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
     },
     {
         name: 'Алтай',
+        alt: 'Долина в Алтае.',
         link: 'https://images.unsplash.com/photo-1643281237857-5f14c2b9f3ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
     },
 ];
@@ -101,6 +107,7 @@ function createNewCard(newName, newLink) {
     const cardElementImage = newCard.querySelector('.card__image');
     cardElementHeading.textContent = newName;
     cardElementImage.setAttribute('src', newLink);
+    cardElementImage.setAttribute('alt', newName);
     // -----------------------------------------------------------
     // ADD LIKE ONTO IMAGES
     const imageLikeButton = newCard.querySelector('.card__like-btn');
@@ -129,7 +136,7 @@ function createNewCard(newName, newLink) {
         imageModal.style.opacity = 1;
 
         modalImage.setAttribute('src', newLink);
-        console.log(modalImage);
+        modalImage.setAttribute('alt', newName)
         modalImageHeading.textContent = newName;
     };
     const closeModal = () => {
@@ -157,7 +164,9 @@ const handleFormNewItemSubmit = (event) => {
     
     const link = document.querySelector('.popup__input_image_link').value;
     const name = document.querySelector('.popup__input_image_name').value;
-    const newCard = { name, link };
+    const alt = name;
+    console.log(alt);
+    const newCard = { name, alt, link };
     placesContainer.prepend(createNewCard(newCard.name, newCard.link));
     handleFormClose(popupNewItem);
     event.target.reset();
