@@ -40,7 +40,6 @@ editProfileButton.addEventListener('click', handleNewUserFormOpen);
 closeNewUserPopupButton.addEventListener('click', handleNewUserFormClose);
 formNewUser.addEventListener('submit', handleFormSubmit);
 // ---------------------------------------------------------------------------
-
 // ADD PHOTOS TO GALLERY
 const formNewItem = document.querySelector('.popup__form_new_item');
 const popupNewItem = document.querySelector('.popup_new_item');
@@ -89,8 +88,6 @@ const initialCards = [
 ];
 // -----------------------------------------------------------------------------
 const placesContainer = document.querySelector('.places');
-
-
 // CREATE NEW CARD
 function createNewCard(newName, newLink) {
     const newCard = document.querySelector('#cardTemplate').content.cloneNode(true);
@@ -99,14 +96,13 @@ function createNewCard(newName, newLink) {
 
     cardElementHeading.textContent = newName;
     cardElementImage.setAttribute('src', newLink);
-
-// ADD LIKE ONTO IMAGES
+    // ADD LIKE ONTO IMAGES
     const imageLikeButton = newCard.querySelector('.card__like-btn');
     const puttLike = () => {
         imageLikeButton.classList.toggle('card__like-btn_active');
     };
     imageLikeButton.addEventListener('click', puttLike);
-// REMOVE CARDS
+    // REMOVE CARDS
     const removeImageButton = newCard.querySelector('.card__remove-btn');
     const removeImage = () => {
         const cardContainer = removeImageButton.closest('.card');
@@ -115,7 +111,26 @@ function createNewCard(newName, newLink) {
     removeImageButton.addEventListener('click', removeImage);
 
     cardElementImage.style.cursor = 'pointer';
+    // IMAGES MODAL
+    const imageModal = document.querySelector('.modal');
+    const modalImage = imageModal.querySelector('.modal__image');
+    const modalImageHeading = imageModal.querySelector('.modal__heading');
+    const modalCloseButton = imageModal.querySelector('.popup__close-btn')
+    const openModalImage = () => {
+        // handleFormOpen(imageModal);
+        imageModal.style.visibility = 'visible';
+        imageModal.style.opacity = 1;
 
+        modalImage.setAttribute('src', newLink);
+        console.log(modalImage);
+        modalImageHeading.textContent = newName;
+    };
+    const closeModal = () => {
+        imageModal.style.visibility = 'hidden';
+        imageModal.style.opacity = 0;
+    }
+    cardElementImage.addEventListener('click', openModalImage);
+    modalCloseButton.addEventListener('click', closeModal)
     return newCard;
 };
 // ADD CARDS INTO HTML
@@ -127,7 +142,6 @@ initialCards.forEach(card => {
 // ADD NEW IMAGES TO GALERY
 const popupInputImageName = document.querySelector('.popup__input_image_name');
 const popupInputImageLink = document.querySelector('.popup__input_image_link');
-
 const handleFormNewItemSubmit = (event) => {
     event.preventDefault();
     
@@ -140,14 +154,7 @@ const handleFormNewItemSubmit = (event) => {
 };
 formNewItem.addEventListener('submit', handleFormNewItemSubmit);
 
+// IMAGES MODAL
 
-// const handleFormNewItemSubmit = (event) => {
-//     event.preventDefault();
-//     handleFormClose(popupNewItem);
-//     const newImage = {name: popupInputImageName.value, link: popupInputImageLink.value};
-//     initialCards.unshift(newImage);
-//     placesContainer.append(newImage);
-// };
-// formNewItem.addEventListener('submit', handleFormNewItemSubmit);
 
 

@@ -1,8 +1,8 @@
-.popup-img__image {
+.modal__image {
     object-fit: cover;
     object-position: top left;
     max-width: 70vw;
-    max-height: 100vh;
+    max-height: 70vh;
     display: flex;
     flex-direction: column;
 }
