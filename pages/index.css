@@ -8,6 +8,9 @@
 /* CONTAINER */
 @import url(../blocks/container/container.css);
 
+/* IMG */
+@import url(../blocks/img/img.css);
+
 /* MAIN */
 @import url(../blocks/main/main.css);
 
