@@ -34,7 +34,7 @@ function handleNewUserFormClose(event) {
 // -----------------------------------------------------------
 // POPUP NEW USER FORM SUBMIT
 function handleFormSubmit(event) {
-    evt.preventDefault();
+    event.preventDefault();
     userNameElement.textContent = popupInputUserName.value;
     userOccupationElement.textContent = popupInputOccupation.value;
     handleFormClose(popupNewUser);
@@ -52,11 +52,12 @@ const openNewItemButton = document.querySelector('.profile__add-btn');
 const closeNewItemPopupButton = document.querySelector('.popup__close-btn_new_item');
 const submitButton = document.querySelector('.popup__submit-btn');
 // NEW ITEM POPUP FORM OPEN
-function handleNewItemFormOpen(evt) {
+function handleNewItemFormOpen(event) {
     handleFormOpen(popupNewItem);
 };
+// -----------------------------------------------------------
 // NEW ITEM POPUP FORM CLOSE
-function handleNewItemFormClose(evt) {
+function handleNewItemFormClose(event) {
     handleFormClose(popupNewItem);
 };
 // -----------------------------------------------------------
@@ -124,7 +125,6 @@ function createNewCard(newName, newLink) {
     const modalImageHeading = imageModal.querySelector('.modal__heading');
     const modalCloseButton = imageModal.querySelector('.popup__close-btn')
     const openModalImage = () => {
-        // handleFormOpen(imageModal);
         imageModal.style.visibility = 'visible';
         imageModal.style.opacity = 1;
 
@@ -135,18 +135,20 @@ function createNewCard(newName, newLink) {
     const closeModal = () => {
         imageModal.style.visibility = 'hidden';
         imageModal.style.opacity = 0;
-    }
+    };
     cardElementImage.addEventListener('click', openModalImage);
     modalCloseButton.addEventListener('click', closeModal)
     // -----------------------------------------------------------
     return newCard;
 };
+// -----------------------------------------------------------------------------
 // ADD CARDS INTO HTML
 initialCards.forEach(card => {
     placesContainer.append(createNewCard(card.name, card.link));
     const popupInputImageName = document.querySelector('.popup__input_image_name');
     const popupInputImageLink = document.querySelector('.popup__input_image_link');
 });
+// -----------------------------------------------------------------------------
 // ADD NEW IMAGES TO GALERY
 const popupInputImageName = document.querySelector('.popup__input_image_name');
 const popupInputImageLink = document.querySelector('.popup__input_image_link');
@@ -161,8 +163,4 @@ const handleFormNewItemSubmit = (event) => {
     event.target.reset();
 };
 formNewItem.addEventListener('submit', handleFormNewItemSubmit);
-
-// IMAGES MODAL
-
-
-
+// -----------------------------------------------------------------------------
