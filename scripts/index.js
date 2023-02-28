@@ -10,6 +10,13 @@ const profile = document.querySelector('.profile');
 const userNameElement = profile.querySelector('.profile__user-name');
 const userOccupationElement = profile.querySelector('.profile__user-occupation');
 // -----------------------------------------------------------
+// CLOSE BUTTONS
+const closeButtons = document.querySelectorAll('.popup__close-btn');
+closeButtons.forEach((button) => {
+    const popup = button.closest('.popup');
+    button.addEventListener('click', () => handleFormClose(popup));
+});
+// -----------------------------------------------------------
 // POPUP NEW IMAGE
 const popupNewItem = document.querySelector('.popup_type_item');
 const formNewItem = popupNewItem.querySelector('.popup__form_type_item');
@@ -28,12 +35,12 @@ const placesContainer = document.querySelector('.places');
 // -----------------------------------------------------------
 // TEMPLATE
 // !!!!
-const newCard = document.querySelector('#cardTemplate');
-const cardElementHeading = newCard.querySelector('.card__title');
-const cardElementImage = newCard.querySelector('.card__image');
+const template = document.querySelector('#cardTemplate');
+// const cardElementHeading = newCard.querySelector('.card__title');
+// const cardElementImage = newCard.querySelector('.card__image');
 
-const imageLikeButton = newCard.querySelector('.card__like-btn');
-const removeImageButton = newCard.querySelector('.card__remove-btn');
+// const imageLikeButton = template.querySelector('.card__like-btn');
+// const removeImageButton = template.querySelector('.card__remove-btn');
 // !!!!
 // -----------------------------------------------------------
 // ADD NEW IMAGES TO GALERY
@@ -57,11 +64,6 @@ const handleNewUserFormOpen = () => {
     popupInputOccupation.value = userOccupationElement.textContent;
 };
 // -----------------------------------------------------------
-// POPUP NEW USER FORM CLOSE
-const handleNewUserFormClose = () => {
-    handleFormClose(popupNewUser);
-};
-// -----------------------------------------------------------
 // POPUP NEW USER FORM SUBMIT
 const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -72,7 +74,6 @@ const handleFormSubmit = (event) => {
 // -----------------------------------------------------------
 // POPUP NEW USER FORM EVENTS
 editProfileButton.addEventListener('click', handleNewUserFormOpen);
-closeNewUserPopupButton.addEventListener('click', handleNewUserFormClose);
 formNewUser.addEventListener('submit', handleFormSubmit);
 // ---------------------------------------------------------------------------
 // ADD PHOTOS TO GALLERY
@@ -81,14 +82,8 @@ const handleNewItemFormOpen = () => {
     handleFormOpen(popupNewItem);
 };
 // -----------------------------------------------------------
-// NEW ITEM POPUP FORM CLOSE
-const handleNewItemFormClose = () => {
-    handleFormClose(popupNewItem);
-};
-// -----------------------------------------------------------
 // POPUP NEW ITEM FORM EVENTS
 openNewItemButton.addEventListener('click', handleNewItemFormOpen);
-closeNewItemPopupButton.addEventListener('click', handleNewItemFormClose);
 // -----------------------------------------------------------------------------
 // GALERY PLACES
 const initialCards = [
@@ -126,32 +121,23 @@ const initialCards = [
 // -----------------------------------------------------------------------------
 // CREATE NEW CARD
 function createNewCard(newName, newLink) {
-
-
-
-
-
     // ? NEED TO BE CORRECTED!
-    newCard.content.cloneNode(true);
-    // const cardElementHeading = newCard.querySelector('.card__title');
-    // const cardElementImage = newCard.querySelector('.card__image');
-
-
-
-
+    const clone = template.content.cloneNode(true);
+    const cardElementHeading = clone.querySelector('.card__title');
+    const cardElementImage = clone.querySelector('.card__image');
     cardElementHeading.textContent = newName;
     cardElementImage.setAttribute('src', newLink);
     cardElementImage.setAttribute('alt', newName);
     // -----------------------------------------------------------
     // ADD LIKE ONTO IMAGES
-    // const imageLikeButton = newCard.querySelector('.card__like-btn');
+    const imageLikeButton = clone.querySelector('.card__like-btn');
     const puttLike = () => {
         imageLikeButton.classList.toggle('card__like-btn_active');
     };
     imageLikeButton.addEventListener('click', puttLike);
     // -----------------------------------------------------------
     // REMOVE CARDS
-    // const removeImageButton = newCard.querySelector('.card__remove-btn');
+    const removeImageButton = clone.querySelector('.card__remove-btn');
     const removeImage = () => {
         const cardContainer = removeImageButton.closest('.card');
         cardContainer.remove();
@@ -168,15 +154,10 @@ function createNewCard(newName, newLink) {
         popupImageHeading.textContent = newName;
     };
     // -----------------------------------------------------------
-    // NEW ITEM POPUP FORM CLOSE
-    const closePopupImage = () => {
-        handleFormClose(popupNewImage);
-    };
     // POPUP IMAGE EVENTS
     cardElementImage.addEventListener('click', openPopupImage);
-    closeImagePopup.addEventListener('click', closePopupImage)
     // -----------------------------------------------------------
-    return newCard;
+    return clone;
 };
 // -----------------------------------------------------------------------------
 // ADD CARDS INTO HTML
@@ -187,10 +168,11 @@ initialCards.forEach(card => {
 // ADD NEW IMAGES TO GALERY
 const handleFormNewItemSubmit = (event) => {
     event.preventDefault();
-    name = popupInputImageName.value;
-    alt = name;
-    link = popupInputImageLink.value;
-    const userNewCard = { name, alt, link };
+    const userNewCard = { 
+        name: popupInputImageName.value, 
+        alt: popupInputImageName.value, 
+        link: popupInputImageLink.value
+     };
     placesContainer.prepend(createNewCard(userNewCard.name, userNewCard.link));
     handleFormClose(popupNewItem);
     event.target.reset();
