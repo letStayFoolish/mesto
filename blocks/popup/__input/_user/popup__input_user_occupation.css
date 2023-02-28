@@ -1,8 +1,0 @@
-.popup__input_user_occupation {
-    margin-bottom: 48px;
-}
-@media (max-width: 320px) {
-    .popup__input_user_occupation {
-        margin-bottom: 46px;
-    }
-}

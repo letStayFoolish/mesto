@@ -1,8 +1,8 @@
-.popup__input_image_link {
+.popup__input_row_second {
     margin-bottom: 48px;
 }
 @media (max-width: 320px) {
-    .popup__input_image_link {
+    .popup__input_row_second {
         margin-bottom: 46px;
     }
 }

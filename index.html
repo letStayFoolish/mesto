@@ -15,6 +15,7 @@
         </header>
         <!-- MAIN -->
         <main class="main container">
+            <!-- PROFILE -->
             <section class="profile">
                 <div class="profile__block">
                     <img src="./images/profile-avatar1.jpeg" alt="Профильный аватар." class="profile__avatar">
@@ -38,38 +39,38 @@
             <p class="footer__licence">&copy; 2023 Mesto Russia</p>
         </footer>
         <!-- POPUP -->
-        <div class="popup popup_new_user">
+        <div class="popup popup_type_user">
             <div class="popup__container">
                 <div class="popup__body">
-                    <button type="button" class="popup__close-btn popup__close-btn_new_user"></button>
+                    <button type="button" class="popup__close-btn popup__close-btn_type_user"></button>
                     <h2 class="popup__title">Редактировать профиль</h2>
-                    <form action="#" name="popup-form" novalidate class="popup__form popup__form_new_user">
-                        <input name="popup-username" type="text" placeholder="Жак-Ив Кусто" required class="popup__input popup__input_user_name text">
-                        <input name="popup-occupation" type="text" placeholder="Исследователь океана" required class="popup__input popup__input_user_occupation text">
+                    <form action="#" name="popup-form" novalidate class="popup__form popup__form_type_user">
+                        <input name="popup-username" type="text" placeholder="Жак-Ив Кусто" required class="popup__input popup__user-name popup__input_row_first">
+                        <input name="popup-occupation" type="text" placeholder="Исследователь океана" required class="popup__input popup__occupation popup__input_row_second">
                         <button class="popup__submit-btn" type="submit">Сохранить</button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="popup popup_new_item">
+        <div class="popup popup_type_item">
             <div class="popup__container">
                 <div class="popup__body">
-                    <button type="button" class="popup__close-btn popup__close-btn_new_item"></button>
+                    <button type="button" class="popup__close-btn popup__close-btn_type_item"></button>
                     <h2 class="popup__title">Новое место</h2>
-                    <form action="#" name="popup-form" novalidate class="popup__form popup__form_new_item">
-                        <input name="popup-image-name" type="text" placeholder="Название" required class="popup__input popup__input_image_name text">
-                        <input name="popup-image-link" type="text" placeholder="Ссылка на картинку" required class="popup__input popup__input_image_link text">
+                    <form action="#" name="popup-form" novalidate class="popup__form popup__form_type_item">
+                        <input name="popup-image-name" type="text" placeholder="Название" required class="popup__input popup__image-name popup__input_row_first">
+                        <input name="popup-image-link" type="text" placeholder="Ссылка на картинку" required class="popup__input popup__image-link popup__input_row_second">
                         <button class="popup__submit-btn" type="submit">Сохранить</button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="modal">
+        <div class="popup popup_type_image">
             <div class="popup__container">
-                <figure class="modal__content">
-                    <button type="button" class="popup__close-btn"></button>
-                    <img alt="#" class="modal__image">
-                    <figcaption class="modal__heading">Териберка</figcaption>
+                <figure class="popup__image">
+                    <button type="button" class="popup__close-btn popup__close-btn_type_image"></button>
+                    <img alt="#" class="popup__img">
+                    <figcaption class="popup__heading"></figcaption>
                 </figure>
             </div>
         </div>

@@ -1,4 +1,4 @@
-.modal__image {
+.popup__img {
     object-fit: cover;
     object-position: top left;
     max-width: 70vw;

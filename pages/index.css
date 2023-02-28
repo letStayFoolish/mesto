@@ -54,18 +54,22 @@
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__close-btn/popup__close-btn.css);
 @import url(../blocks/popup/__form/popup__form.css);
-@import url(../blocks/popup/__input/popup__input.css);
-@import url(../blocks/popup/__input/_user/popup__input_user_name.css);
-@import url(../blocks/popup/__input/_user/popup__input_user_occupation.css);
-@import url(../blocks/popup/__input/_image/popup__input_image_name.css);
-@import url(../blocks/popup/__input/_image/popup__input_image_link.css);
 @import url(../blocks/popup/__submit-btn/popup__submit-btn.css);
+/* POPUP INPUTS */
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__input/_row/popup__input_row_first.css);
+@import url(../blocks/popup/__input/_row/popup__input_row_second.css);
+/* POPUP USER */
+@import url(../blocks/popup/_type/_user/popup_type_user.css);
+/* POPUP ITEM */
+@import url(../blocks/popup/_type/_item/popup_type_item.css);
+/* POPUP IMAGE */
+@import url(../blocks/popup/_type/_image/popup_type_image.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__img/popup__img.css);
+@import url(../blocks/popup/__heading/popup__heading.css);
 
-/* IMAGE MODAL */
-@import url(../blocks/modal/modal.css);
-@import url(../blocks/modal/__close-btn/modal__close-btn.css);
-@import url(../blocks/modal/__content/modal__content.css);
-@import url(../blocks/modal/__image/modal__image.css);
-@import url(../blocks/modal/__heading/modal__heading.css);
+
+
 
 
