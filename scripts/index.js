@@ -36,11 +36,6 @@ const placesContainer = document.querySelector('.places');
 // TEMPLATE
 // !!!!
 const template = document.querySelector('#cardTemplate');
-// const cardElementHeading = newCard.querySelector('.card__title');
-// const cardElementImage = newCard.querySelector('.card__image');
-
-// const imageLikeButton = template.querySelector('.card__like-btn');
-// const removeImageButton = template.querySelector('.card__remove-btn');
 // !!!!
 // -----------------------------------------------------------
 // ADD NEW IMAGES TO GALERY
@@ -121,7 +116,6 @@ const initialCards = [
 // -----------------------------------------------------------------------------
 // CREATE NEW CARD
 function createNewCard(newName, newLink) {
-    // ? NEED TO BE CORRECTED!
     const clone = template.content.cloneNode(true);
     const cardElementHeading = clone.querySelector('.card__title');
     const cardElementImage = clone.querySelector('.card__image');
