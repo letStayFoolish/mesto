@@ -44,7 +44,7 @@
                 <div class="popup__body">
                     <button type="button" class="popup__close-btn popup__close-btn_type_user"></button>
                     <h2 class="popup__title">Редактировать профиль</h2>
-                    <form action="#" name="popup-form" novalidate class="popup__form popup__form_type_user">
+                    <form action="#" name="popup-form" class="popup__form popup__form_type_user">
                         <input name="popup-username" type="text" placeholder="Жак-Ив Кусто" required class="popup__input popup__user-name popup__input_row_first">
                         <input name="popup-occupation" type="text" placeholder="Исследователь океана" required class="popup__input popup__occupation popup__input_row_second">
                         <button class="popup__submit-btn" type="submit">Сохранить</button>
@@ -57,9 +57,9 @@
                 <div class="popup__body">
                     <button type="button" class="popup__close-btn popup__close-btn_type_item"></button>
                     <h2 class="popup__title">Новое место</h2>
-                    <form action="#" name="popup-form" novalidate class="popup__form popup__form_type_item">
-                        <input name="popup-image-name" type="text" placeholder="Название" required class="popup__input popup__image-name popup__input_row_first">
-                        <input name="popup-image-link" type="text" placeholder="Ссылка на картинку" required class="popup__input popup__image-link popup__input_row_second">
+                    <form action="url" name="popup-form" class="popup__form popup__form_type_item">
+                        <input name="popup-image-name" type="text" placeholder="Название" class="popup__input popup__image-name popup__input_row_first" required>
+                        <input name="popup-image-link" type="text" placeholder="Ссылка на картинку" class="popup__input popup__image-link popup__input_row_second" required>
                         <button class="popup__submit-btn" type="submit">Сохранить</button>
                     </form>
                 </div>

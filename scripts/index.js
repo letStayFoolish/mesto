@@ -34,9 +34,7 @@ const closeImagePopup = popupNewImage.querySelector('.popup__close-btn_type_imag
 const placesContainer = document.querySelector('.places');
 // -----------------------------------------------------------
 // TEMPLATE
-// !!!!
 const template = document.querySelector('#cardTemplate');
-// !!!!
 // -----------------------------------------------------------
 // ADD NEW IMAGES TO GALERY
 const popupInputImageName = document.querySelector('.popup__image-name');
